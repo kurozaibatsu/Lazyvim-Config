@@ -17,5 +17,9 @@ vim.keymap.set("n", "<C-u>", ":redo<CR>", { noremap = true, silent = true })
 -- ;; Enter Normal mode
 vim.keymap.set({"x", "i"}, ";;", "<esc>", { noremap = true, silent = true })
 
--- ;r Reset buffer
-vim.keymap.set("n", ";r", ":edit!<CR>", { noremap = true, silent = true })
+
+-- <leader>r Reset buffer
+vim.keymap.set("n", "<leader>r", ":edit!<CR>", { noremap = true, silent = true, desc = "Reset buffer" })
+
+-- <leader>j Join lines
+vim.keymap.set("n", "<leader>j", ":normal! J<CR>", { noremap = true, silent = true, desc = "Join lines" })
