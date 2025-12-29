@@ -17,6 +17,12 @@ vim.keymap.set("n", "<C-u>", ":redo<CR>", { noremap = true, silent = true })
 -- ;; Enter Normal mode
 vim.keymap.set({"x", "i"}, ";;", "<esc>", { noremap = true, silent = true })
 
+-- CTRL+C Close
+vim.keymap.set("n", "<C-c>", ":qa<CR>", { noremap = true, silent = true })
+
+-- CTRL+C Copy
+vim.keymap.set("x", "<C-c>", "y", { noremap = true, silent = true })
+
 
 -- <leader>r Reset buffer
 vim.keymap.set("n", "<leader>r", ":edit!<CR>", { noremap = true, silent = true, desc = "Reset buffer" })
