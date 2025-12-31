@@ -38,3 +38,6 @@ vim.keymap.set("n", "<C-c>", "yy", { noremap = true, silent = true })
 -- Cursor movement in insert mode
 vim.keymap.set("i", "<C-h>", "<Left>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true })
+
+-- Mouse click enters insert mode
+vim.keymap.set('n', '<LeftMouse>', "<LeftMouse>i", { noremap = true, silent = true })
