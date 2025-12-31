@@ -14,8 +14,8 @@ vim.keymap.set({"n", "x"}, "<C-d>", "<Nop>", { noremap = true, silent = true })
 vim.keymap.set({"n", "x"}, "<C-u>", "<Nop>", { noremap = true, silent = true })
 local function set_horizontal_scrolling()
 local half_width = math.floor(vim.o.columns / 2)
-    vim.keymap.set({'n', "x"}, '<A-h>', half_width .. 'h', { noremap = true, silent = true })
-    vim.keymap.set({'n', "x"}, '<A-l>', half_width .. 'l', { noremap = true, silent = true })
+    vim.keymap.set({"n", "x"}, "<A-h>", half_width .. "h", { noremap = true, silent = true })
+    vim.keymap.set({"n", "x"}, "<A-l>", half_width .. "l", { noremap = true, silent = true })
 end
 set_horizontal_scrolling()
 vim.api.nvim_create_autocmd("VimResized", {
@@ -35,10 +35,18 @@ vim.keymap.set({"n", "x", "i"}, "<C-q>", "<CMD>quitall<CR>", { noremap = true, s
 vim.keymap.set("x", "<C-c>", "y", { noremap = true, silent = true })
 vim.keymap.set("s", "<C-c>", "<C-g>y", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-c>", "yy", { noremap = true, silent = true })
+-- CTRL+x Cut
+vim.keymap.set("x", "<C-x>", "d", { noremap = true, silent = true })
+vim.keymap.set("s", "<C-x>", "<C-g>d", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-x>", "dd", { noremap = true, silent = true })
+-- CTRL+v Paste
+vim.keymap.set({"n", "x"}, "<C-v>", "p", { noremap = true, silent = true })
+vim.keymap.set("s", "<C-v>", "<C-g>p", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-v>", "<C-r>+", { noremap = true, silent = true })
 
 -- Cursor movement in insert mode
 vim.keymap.set("i", "<C-h>", "<Left>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true })
 
 -- Mouse click enters insert mode
-vim.keymap.set('n', '<LeftMouse>', "<LeftMouse>i", { noremap = true, silent = true })
+vim.keymap.set("n", "<LeftMouse>", "<LeftMouse>i", { noremap = true, silent = true })
