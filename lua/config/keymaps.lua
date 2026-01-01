@@ -56,6 +56,3 @@ vim.keymap.set("i", "<A-k>", "<UP>", { noremap = true, silent = true })
 
 -- CTRL+l delete character to the right to match with CTRL+h
 vim.keymap.set("i", "<C-l>", "<DEL>", { noremap = true, silent = true })
-
--- Mouse click enters insert mode
-vim.keymap.set("n", "<LeftMouse>", "<LeftMouse>i", { noremap = true, silent = true })
